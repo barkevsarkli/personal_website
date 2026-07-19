@@ -1,0 +1,225 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #0a0a0a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* ---- Lenis smooth scroll ---- */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* The fixed 3D canvas sits behind all content */
+.three-canvas-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Scrollbar styling for the light high-contrast theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background: #0a0a0a;
+  border-radius: 8px;
+}
+
+@layer components {
+  /* High-contrast card: white fill, crisp ink border, hard offset shadow */
+  .glass {
+    @apply rounded-2xl border-2 border-[#0a0a0a] bg-white/90 backdrop-blur-sm;
+    box-shadow: 6px 6px 0 0 rgba(10, 10, 10, 0.06);
+  }
+
+  .glass-hover {
+    @apply transition-all duration-300;
+  }
+  .glass-hover:hover {
+    box-shadow: 8px 8px 0 0 rgba(10,10,10,0.18);
+    transform: translate(-1px, -1px);
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-2 rounded-full border-2 border-[#0a0a0a]
+      bg-white px-4 py-2 text-sm font-semibold text-[#0a0a0a]
+      transition-all duration-200
+      hover:bg-[#0a0a0a] hover:text-white;
+  }
+
+  .section-label {
+    @apply mb-3 inline-block font-mono text-xs font-semibold uppercase tracking-[0.3em] text-neural-blue;
+  }
+
+  /* High-contrast accent text */
+  .gradient-text {
+    @apply text-neural-blue;
+  }
+
+  /* Primary / secondary buttons */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-full border-2 border-[#0a0a0a]
+      bg-[#0a0a0a] px-7 py-3.5 font-semibold text-white transition-all duration-200
+      hover:bg-neural-blue hover:border-neural-blue;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 rounded-full border-2 border-[#0a0a0a]
+      bg-white px-7 py-3.5 font-semibold text-[#0a0a0a] transition-all duration-200
+      hover:bg-[#0a0a0a] hover:text-white;
+  }
+}
+
+/* ---- Project micro-animations ---- */
+@keyframes pv-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes pv-dot {
+  0%, 80%, 100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  40% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+@keyframes pv-pixel {
+  0%, 100% {
+    opacity: 0.12;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes pv-travel {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  15%,
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(52px);
+    opacity: 0;
+  }
+}
+@keyframes pv-flap {
+  0%, 100% {
+    transform: rotate(-16deg);
+  }
+  50% {
+    transform: rotate(16deg);
+  }
+}
+@keyframes pv-dash {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+@keyframes pv-fly {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-5px, -4px);
+  }
+}
+@keyframes pv-scan {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(26px);
+    opacity: 1;
+  }
+}
+.pv-spin {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pv-spin 4s linear infinite;
+}
+.pv-spin-rev {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pv-spin 3s linear infinite reverse;
+}
+.pv-dot {
+  animation: pv-dot 1.2s ease-in-out infinite;
+}
+.pv-pixel {
+  animation: pv-pixel 1.6s ease-in-out infinite;
+}
+.pv-travel {
+  animation: pv-travel 2.2s ease-in-out infinite;
+}
+.pv-flap {
+  transform-box: fill-box;
+  transform-origin: left center;
+  animation: pv-flap 0.9s ease-in-out infinite;
+}
+.pv-dash {
+  stroke-dasharray: 6 6;
+  animation: pv-dash 0.7s linear infinite;
+}
+.pv-fly {
+  animation: pv-fly 2.4s ease-in-out infinite;
+}
+.pv-scan {
+  animation: pv-scan 2s ease-in-out infinite;
+}
+
+/* ---- Apple-style motion primitive ---- */
+
+/* Batched fade/scale/blur reveal (GSAP toggles the visible state). */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px) scale(0.99);
+  filter: blur(4px);
+  will-change: transform, opacity, filter;
+}
+
+/* Respect users who ask for less motion: show everything, drop the transforms. */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
