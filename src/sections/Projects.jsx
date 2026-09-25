@@ -3,7 +3,7 @@ import Pop from "../components/Pop";
 import ProjectVisual from "../components/ProjectVisual";
 import { useLang } from "../i18n/LanguageContext";
 
-const ACCENTS = ["cyan", "violet", "blue", "cyan", "violet", "blue"];
+const ACCENTS = ["cyan", "violet", "blue", "cyan", "violet", "blue", "cyan", "violet", "blue"];
 const accentRing = {
   cyan: "hover:shadow-[8px_8px_0_0_rgba(10,10,10,0.18)]",
   violet: "hover:shadow-[8px_8px_0_0_rgba(10,10,10,0.18)]",
@@ -29,12 +29,13 @@ export default function Projects() {
               accentRing[ACCENTS[i % ACCENTS.length]]
             } ${i === 0 ? "md:col-span-2" : ""}`}
           >
-            <ProjectVisual index={i} />
+            <ProjectVisual name={p.visual} />
 
             <div className="mb-4 flex items-center justify-between">
               <span className="font-mono text-xs uppercase tracking-widest text-neural-blue">
                 {p.tag}
               </span>
+              <span className="font-mono text-xs text-zinc-400">{p.year}</span>
             </div>
 
             <h3 className="mb-3 text-xl font-bold text-[#0a0a0a] sm:text-2xl">{p.title}</h3>

@@ -25,6 +25,13 @@ export const CERTIFICATES = [
     url: "https://coursera.org/verify/69XG273IBXHX",
   },
   {
+    title: "Introduction to Computer Vision and Image Processing",
+    issuer: "IBM — Coursera",
+    date: "2025",
+    category: "Computer Vision",
+    url: "",
+  },
+  {
     title: "Space Exploration",
     issuer: "Technical University of Munich (TUM) — Coursera",
     date: "Feb 2025",
@@ -32,10 +39,17 @@ export const CERTIFICATES = [
     url: "https://coursera.org/verify/VWZNYEEHQFCH",
   },
   {
-    title: "SOLIDWORKS Training",
-    issuer: "TEKYAZ Online",
+    title: "SOLIDWORKS Professional Training",
+    issuer: "TEKYAZ Yazılım",
     date: "Oct 2024",
     category: "CAD / Design",
+    url: "",
+  },
+  {
+    title: "Learn C++ Programming: Beginner to Advance – Deep Dive in C++",
+    issuer: "Udemy",
+    date: "2024",
+    category: "Programming",
     url: "",
   },
   {
@@ -82,18 +96,27 @@ export const CERTIFICATES = [
   },
 ];
 
+// Grouped by domain. `key` maps to the translated group title in
+// translations.js (arsenal.groups); the tool names themselves aren't translated.
 export const STACK = [
-  "C",
-  "C++",
-  "Python",
-  "Java",
-  "Swift",
-  "Kotlin",
-  "R",
-  "SQL",
-  "PyTorch",
-  "LangChain",
-  "MATLAB / Simulink",
-  "SOLIDWORKS",
-  "Linux / Ubuntu",
+  {
+    key: "ml",
+    items: ["PyTorch", "Hugging Face Transformers", "scikit-learn", "Ultralytics YOLO", "OpenCV", "NumPy", "Pandas"],
+  },
+  {
+    key: "llm",
+    items: ["OpenAI API", "Ollama", "llama.cpp / ggml", "LangChain", "crewAI", "n8n"],
+  },
+  {
+    key: "languages",
+    items: ["C", "C++", "Python", "Java", "Kotlin", "Swift", "R", "SQL", "Shell Scripting"],
+  },
+  {
+    key: "systems",
+    items: ["Boost (Asio / Beast)", "OpenSSL", "CUDA", "FastAPI / Flask", "Docker", "Git", "Linux (Ubuntu)"],
+  },
+  {
+    key: "tools",
+    items: ["SOLIDWORKS & Simulation (FEA)", "MATLAB / Simulink", "Azure", "MySQL", "Wireshark", "VS Code"],
+  },
 ];

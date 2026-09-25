@@ -4,7 +4,18 @@ import { useLang } from "../i18n/LanguageContext";
 import { LANGS } from "../i18n/translations";
 import { scrollToId, scrollToTop } from "../lib/smoothScroll";
 
-const NAV_IDS = ["about", "certificates", "arsenal", "experience", "projects", "contact"];
+// Links appear progressively as the bar widens, so it never overflows
+// (the "Connect" button always covers contact). Leadership is reachable by
+// scrolling but left out here: with it, the bar can't fit at any width.
+const NAV_ITEMS = [
+  { id: "about", show: "md:block" },
+  { id: "certificates", show: "lg:block" },
+  { id: "arsenal", show: "lg:block" },
+  { id: "experience", show: "md:block" },
+  { id: "publications", show: "lg:block" },
+  { id: "projects", show: "md:block" },
+  { id: "contact", show: "xl:block" },
+];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -42,11 +53,11 @@ export default function Navbar() {
         </button>
 
         <div className="hidden items-center gap-1 md:flex">
-          {NAV_IDS.map((id) => (
+          {NAV_ITEMS.map(({ id, show }) => (
             <button
               key={id}
               onClick={() => go(id)}
-              className="rounded-full px-4 py-1.5 text-sm font-medium text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-[#0a0a0a]"
+              className={`hidden ${show} whitespace-nowrap rounded-full px-4 py-1.5 text-sm font-medium text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-[#0a0a0a]`}
             >
               {t.nav[id]}
             </button>

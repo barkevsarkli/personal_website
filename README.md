@@ -40,14 +40,15 @@ npm run preview  # preview the production build
 
 ```
 src/
-  components/   ThreeScene, Navbar, SectionHeading, Icons
-  sections/     Hero, About, Arsenal, Experience, Projects, Hobbies, Footer
+  components/   ThreeScene, Navbar, SectionHeading, Pop, ProjectVisual, Icons
+  sections/     Hero, About, Education, Certificates, Arsenal, Experience,
+                Publications, Projects, Leadership, Hobbies (Off-Screen), Footer (Contact)
   three/        NeuralNetwork (shaders), scrollProgress store
   hooks/        useReveal (scroll-in animations)
-  data/         content.js  <-- all copy lives here
+  i18n/         translations.js  <-- all copy, in EN / TR / DE
+  data/         content.js       <-- profile links, certificates, grouped tech stack
 ```
 
-## Notes
-
-Contact details (GitHub, LinkedIn, email) in `src/data/content.js` are
-**placeholders** — swap them when ready.
+Section order is set in `src/App.jsx`. Each project in `translations.js` names
+its motif with a `visual` key (see `ProjectVisual.jsx`), so reordering projects
+never mixes up their visuals.
