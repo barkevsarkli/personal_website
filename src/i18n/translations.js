@@ -168,7 +168,7 @@ export const translations = {
         "From scratch-built ML engines to enterprise systems and physical machines.",
       items: [
         {
-          visual: "chat",
+          visual: "barkevgpt",
           title: "BarkevGPT",
           tag: "AI · Agents",
           year: "2026",
@@ -176,7 +176,7 @@ export const translations = {
           highlights: ["Local LLM", "Agentic workflows", "On-device"],
         },
         {
-          visual: "tunnel",
+          visual: "vpn",
           title: "Custom VPN (C++)",
           tag: "Systems · Networking",
           year: "2026",
@@ -184,7 +184,7 @@ export const translations = {
           highlights: ["TUN/TAP", "OpenSSL", "Boost.Asio"],
         },
         {
-          visual: "bridge",
+          visual: "whatsapp-llm",
           title: "WhatsApp LLM (C++)",
           tag: "AI · Systems",
           year: "2026",
@@ -192,7 +192,7 @@ export const translations = {
           highlights: ["Edge inference", "Local LLM", "C++"],
         },
         {
-          visual: "detect",
+          visual: "library-tracker",
           title: "Library Tracker (YOLO)",
           tag: "Computer Vision",
           year: "2025",
@@ -200,7 +200,7 @@ export const translations = {
           highlights: ["YOLO", "Real-time", "Occupancy detection"],
         },
         {
-          visual: "net",
+          visual: "neural-net",
           title: "Neural Network (C++)",
           tag: "Systems · ML",
           year: "2025",
@@ -208,7 +208,7 @@ export const translations = {
           highlights: ["Zero dependencies", "Backpropagation", "C++"],
         },
         {
-          visual: "pixels",
+          visual: "image-decoder",
           title: "Image Decoder (C++)",
           tag: "Low-Level",
           year: "2025",
@@ -216,7 +216,7 @@ export const translations = {
           highlights: ["JFIF/BMP", "Binary parsing", "Zero dependencies"],
         },
         {
-          visual: "gears",
+          visual: "mech-bird",
           title: "Mechanical Bird (SOLIDWORKS)",
           tag: "Mechatronics",
           year: "2025",
@@ -224,7 +224,7 @@ export const translations = {
           highlights: ["Kinematic synthesis", "Gear trains", "Linkages"],
         },
         {
-          visual: "plane",
+          visual: "aircraft-fea",
           title: "Aircraft Design (SOLIDWORKS)",
           tag: "Mechanical",
           year: "2025",
@@ -232,7 +232,7 @@ export const translations = {
           highlights: ["FEA", "Assembly", "Stress analysis"],
         },
         {
-          visual: "database",
+          visual: "blood-donor",
           title: "Blood Donor System",
           tag: "Databases",
           year: "2023",
@@ -461,7 +461,7 @@ export const translations = {
         "Sıfırdan ML motorlarından kurumsal sistemlere ve fiziksel makinelere.",
       items: [
         {
-          visual: "chat",
+          visual: "barkevgpt",
           title: "BarkevGPT",
           tag: "Yapay Zekâ · Ajanlar",
           year: "2026",
@@ -469,7 +469,7 @@ export const translations = {
           highlights: ["Yerel LLM", "Ajan iş akışları", "Cihaz üstü"],
         },
         {
-          visual: "tunnel",
+          visual: "vpn",
           title: "Özel VPN (C++)",
           tag: "Sistemler · Ağlar",
           year: "2026",
@@ -477,7 +477,7 @@ export const translations = {
           highlights: ["TUN/TAP", "OpenSSL", "Boost.Asio"],
         },
         {
-          visual: "bridge",
+          visual: "whatsapp-llm",
           title: "WhatsApp LLM (C++)",
           tag: "Yapay Zekâ · Sistemler",
           year: "2026",
@@ -485,7 +485,7 @@ export const translations = {
           highlights: ["Uç çıkarım", "Yerel LLM", "C++"],
         },
         {
-          visual: "detect",
+          visual: "library-tracker",
           title: "Kütüphane Takipçisi (YOLO)",
           tag: "Bilgisayarlı Görü",
           year: "2025",
@@ -493,7 +493,7 @@ export const translations = {
           highlights: ["YOLO", "Gerçek zamanlı", "Doluluk tespiti"],
         },
         {
-          visual: "net",
+          visual: "neural-net",
           title: "Sinir Ağı (C++)",
           tag: "Sistemler · ML",
           year: "2025",
@@ -501,7 +501,7 @@ export const translations = {
           highlights: ["Sıfır bağımlılık", "Geri yayılım", "C++"],
         },
         {
-          visual: "pixels",
+          visual: "image-decoder",
           title: "Görüntü Çözücü (C++)",
           tag: "Düşük Seviye",
           year: "2025",
@@ -509,7 +509,7 @@ export const translations = {
           highlights: ["JFIF/BMP", "İkili ayrıştırma", "Sıfır bağımlılık"],
         },
         {
-          visual: "gears",
+          visual: "mech-bird",
           title: "Mekanik Kuş (SOLIDWORKS)",
           tag: "Mekatronik",
           year: "2025",
@@ -517,7 +517,7 @@ export const translations = {
           highlights: ["Kinematik sentez", "Dişli sistemleri", "Bağlantılar"],
         },
         {
-          visual: "plane",
+          visual: "aircraft-fea",
           title: "Uçak Tasarımı (SOLIDWORKS)",
           tag: "Mekanik",
           year: "2025",
@@ -525,7 +525,7 @@ export const translations = {
           highlights: ["FEA", "Montaj", "Gerilme analizi"],
         },
         {
-          visual: "database",
+          visual: "blood-donor",
           title: "Kan Bağışçısı Sistemi",
           tag: "Veritabanları",
           year: "2023",
@@ -754,7 +754,7 @@ export const translations = {
         "Von selbstgebauten ML-Engines bis zu Unternehmenssystemen und physischen Maschinen.",
       items: [
         {
-          visual: "chat",
+          visual: "barkevgpt",
           title: "BarkevGPT",
           tag: "KI · Agenten",
           year: "2026",
@@ -762,7 +762,7 @@ export const translations = {
           highlights: ["Lokales LLM", "Agentische Workflows", "On-Device"],
         },
         {
-          visual: "tunnel",
+          visual: "vpn",
           title: "Eigenes VPN (C++)",
           tag: "Systeme · Netzwerke",
           year: "2026",
@@ -770,7 +770,7 @@ export const translations = {
           highlights: ["TUN/TAP", "OpenSSL", "Boost.Asio"],
         },
         {
-          visual: "bridge",
+          visual: "whatsapp-llm",
           title: "WhatsApp LLM (C++)",
           tag: "KI · Systeme",
           year: "2026",
@@ -778,7 +778,7 @@ export const translations = {
           highlights: ["Edge-Inferenz", "Lokales LLM", "C++"],
         },
         {
-          visual: "detect",
+          visual: "library-tracker",
           title: "Bibliotheks-Tracker (YOLO)",
           tag: "Computer Vision",
           year: "2025",
@@ -786,7 +786,7 @@ export const translations = {
           highlights: ["YOLO", "Echtzeit", "Belegungserkennung"],
         },
         {
-          visual: "net",
+          visual: "neural-net",
           title: "Neuronales Netz (C++)",
           tag: "Systeme · ML",
           year: "2025",
@@ -794,7 +794,7 @@ export const translations = {
           highlights: ["Keine Abhängigkeiten", "Backpropagation", "C++"],
         },
         {
-          visual: "pixels",
+          visual: "image-decoder",
           title: "Bilddecoder (C++)",
           tag: "Low-Level",
           year: "2025",
@@ -802,7 +802,7 @@ export const translations = {
           highlights: ["JFIF/BMP", "Binär-Parsing", "Keine Abhängigkeiten"],
         },
         {
-          visual: "gears",
+          visual: "mech-bird",
           title: "Mechanischer Vogel (SOLIDWORKS)",
           tag: "Mechatronik",
           year: "2025",
@@ -810,7 +810,7 @@ export const translations = {
           highlights: ["Kinematische Synthese", "Zahnradgetriebe", "Gestänge"],
         },
         {
-          visual: "plane",
+          visual: "aircraft-fea",
           title: "Flugzeugkonstruktion (SOLIDWORKS)",
           tag: "Mechanik",
           year: "2025",
@@ -818,7 +818,7 @@ export const translations = {
           highlights: ["FEM", "Baugruppe", "Spannungsanalyse"],
         },
         {
-          visual: "database",
+          visual: "blood-donor",
           title: "Blutspender-System",
           tag: "Datenbanken",
           year: "2023",
