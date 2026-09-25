@@ -4,7 +4,16 @@ import { useLang } from "../i18n/LanguageContext";
 import { LANGS } from "../i18n/translations";
 import { scrollToId, scrollToTop } from "../lib/smoothScroll";
 
-const NAV_IDS = ["about", "certificates", "arsenal", "experience", "projects", "contact"];
+const NAV_IDS = [
+  "about",
+  "certificates",
+  "arsenal",
+  "experience",
+  "publications",
+  "projects",
+  "leadership",
+  "contact",
+];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);

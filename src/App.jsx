@@ -11,7 +11,9 @@ import Education from "./sections/Education";
 import Certificates from "./sections/Certificates";
 import Arsenal from "./sections/Arsenal";
 import Experience from "./sections/Experience";
+import Publications from "./sections/Publications";
 import Projects from "./sections/Projects";
+import Leadership from "./sections/Leadership";
 import Hobbies from "./sections/Hobbies";
 import Footer from "./sections/Footer";
 import { useReveal } from "./hooks/useReveal";
@@ -76,7 +78,9 @@ export default function App() {
         <Certificates />
         <Arsenal />
         <Experience />
+        <Publications />
         <Projects />
+        <Leadership />
         <Hobbies />
         <Footer />
       </main>

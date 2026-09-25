@@ -6,7 +6,7 @@ import { useLang } from "../i18n/LanguageContext";
 
 export default function Arsenal() {
   const { t } = useLang();
-  const { label, title, intro, focus } = t.arsenal;
+  const { label, title, intro, groups, focus } = t.arsenal;
 
   return (
     <section id="arsenal" className="relative mx-auto max-w-6xl px-6 py-28">
@@ -15,16 +15,25 @@ export default function Arsenal() {
         {intro}
       </SectionHeading>
 
-      <div className="mb-12 flex flex-wrap gap-3">
-        {STACK.map((tech) => (
-          <span key={tech} className="chip font-mono">
-            <span className="h-1.5 w-1.5 rounded-full bg-neural-blue" />
-            {tech}
-          </span>
+      <div className="mb-12 space-y-6">
+        {STACK.map((group) => (
+          <div key={group.key} className="md:flex md:items-start md:gap-6">
+            <span className="mb-3 block font-mono text-xs font-semibold uppercase tracking-[0.25em] text-neural-blue md:mb-0 md:w-52 md:shrink-0 md:pt-3">
+              {groups[group.key]}
+            </span>
+            <div className="flex flex-wrap gap-3">
+              {group.items.map((tech) => (
+                <span key={tech} className="chip font-mono">
+                  <span className="h-1.5 w-1.5 rounded-full bg-neural-blue" />
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
         ))}
       </div>
 
-      <div className="grid gap-6 md:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         {focus.map((f) => (
           <div
             key={f.title}

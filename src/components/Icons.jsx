@@ -23,6 +23,13 @@ export function Icon({ name, className = "h-6 w-6" }) {
         <path d="M12 5v14" />
       </>
     ),
+    bot: (
+      <>
+        <rect x="4" y="8" width="16" height="12" rx="3" />
+        <path d="M12 4v4M9 13v1M15 13v1M10 17h4M2 13v2M22 13v2" />
+        <circle cx="12" cy="3.5" r="1" />
+      </>
+    ),
     gear: (
       <>
         <circle cx="12" cy="12" r="3" />

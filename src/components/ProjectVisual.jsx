@@ -130,10 +130,99 @@ function Database() {
   );
 }
 
-const VISUALS = [Chat, MiniNet, PixelGrid, Gears, Plane, Database];
+function Tunnel() {
+  // Two endpoints joined by a tunnel; an encrypted packet rides through it.
+  return (
+    <svg viewBox="0 0 120 60" className="h-16">
+      <rect x="6" y="20" width="20" height="16" rx="3" fill={INK} />
+      <rect x="94" y="20" width="20" height="16" rx="3" fill="#e5e7eb" />
+      <line x1="16" y1="36" x2="16" y2="42" stroke={INK} strokeWidth="2" />
+      <line x1="104" y1="36" x2="104" y2="42" stroke="#cbd5e1" strokeWidth="2" />
+      <rect x="28" y="21" width="64" height="14" rx="7" fill="none" stroke="#cbd5e1" strokeWidth="2" />
+      <line className="pv-dash" x1="32" y1="28" x2="88" y2="28" stroke="#cbd5e1" strokeWidth="1.5" strokeLinecap="round" />
+      <g className="pv-travel">
+        <rect x="31" y="24" width="10" height="8" rx="2" fill={BLUE} />
+        <path d="M33.5 24v-1.5a2.5 2.5 0 0 1 5 0V24" fill="none" stroke={BLUE} strokeWidth="1.3" />
+      </g>
+    </svg>
+  );
+}
 
-export default function ProjectVisual({ index }) {
-  const V = VISUALS[index % VISUALS.length];
+function Bridge() {
+  // A chat bubble handing messages to a local model chip.
+  return (
+    <svg viewBox="0 0 120 60" className="h-16">
+      <path d="M10 16h26a6 6 0 0 1 6 6v8a6 6 0 0 1-6 6H20l-6 5v-5h-4a6 6 0 0 1-6-6v-8a6 6 0 0 1 6-6Z" fill="#e5e7eb" />
+      {[15, 23, 31].map((cx, i) => (
+        <circle key={i} className="pv-dot" cx={cx} cy="26" r="2.5" fill={INK} style={{ animationDelay: `${i * 0.15}s` }} />
+      ))}
+      <line className="pv-dash" x1="48" y1="28" x2="78" y2="28" stroke="#cbd5e1" strokeWidth="2" strokeLinecap="round" />
+      <g stroke={INK} strokeWidth="1.5" strokeLinecap="round">
+        {[20, 28, 36].map((y) => (
+          <g key={y}>
+            <line x1="82" y1={y} x2="86" y2={y} />
+            <line x1="110" y1={y} x2="114" y2={y} />
+          </g>
+        ))}
+      </g>
+      <rect x="86" y="14" width="24" height="28" rx="4" fill={INK} />
+      <rect className="pv-pixel" x="92" y="22" width="12" height="12" rx="2" fill="#fff" />
+    </svg>
+  );
+}
+
+function Detect() {
+  // Library seats seen from above; occupied ones get blinking detection boxes.
+  const seats = [
+    [24, 12, true],
+    [52, 12, false],
+    [80, 12, true],
+    [24, 36, false],
+    [52, 36, true],
+    [80, 36, false],
+  ];
+  return (
+    <svg viewBox="0 0 120 60" className="h-16">
+      {seats.map(([x, y, busy], i) => (
+        <g key={i}>
+          <rect x={x} y={y} width="16" height="12" rx="3" fill={busy ? INK : "#e5e7eb"} />
+          {busy && (
+            <rect
+              className="pv-pixel"
+              x={x - 4}
+              y={y - 4}
+              width="24"
+              height="20"
+              rx="2"
+              fill="none"
+              stroke={BLUE}
+              strokeWidth="1.5"
+              style={{ animationDelay: `${i * 0.2}s` }}
+            />
+          )}
+        </g>
+      ))}
+      <rect className="pv-scan" x="16" y="6" width="88" height="2" rx="1" fill="#9ca3af" opacity="0.8" />
+    </svg>
+  );
+}
+
+// Looked up by each project's `visual` key (not its position in the list), so
+// reordering projects never swaps their motifs.
+const VISUALS = {
+  chat: Chat,
+  net: MiniNet,
+  pixels: PixelGrid,
+  gears: Gears,
+  plane: Plane,
+  database: Database,
+  tunnel: Tunnel,
+  bridge: Bridge,
+  detect: Detect,
+};
+
+export default function ProjectVisual({ name }) {
+  const V = VISUALS[name] ?? Chat;
   return (
     <div className="relative mb-5 flex h-28 w-full items-center justify-center overflow-hidden rounded-xl border border-[#0a0a0a]/10 bg-gradient-to-br from-zinc-50 to-zinc-100">
       <V />
