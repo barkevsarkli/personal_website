@@ -29,7 +29,7 @@ export default function Projects() {
               accentRing[ACCENTS[i % ACCENTS.length]]
             } ${i === 0 ? "md:col-span-2" : ""}`}
           >
-            <ProjectVisual name={p.visual} />
+            <ProjectVisual name={p.visual} steps={p.steps} />
 
             <div className="mb-4 flex items-center justify-between">
               <span className="font-mono text-xs uppercase tracking-widest text-neural-blue">

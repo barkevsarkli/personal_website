@@ -168,6 +168,7 @@ export const translations = {
       items: [
         {
           visual: "chat",
+          steps: ["prompt", "plan", "tool call", "observe", "answer"],
           title: "BarkevGPT",
           tag: "AI · Agents",
           year: "2026",
@@ -176,6 +177,7 @@ export const translations = {
         },
         {
           visual: "tunnel",
+          steps: ["packet", "encrypt", "encapsulate", "tunnel", "decrypt", "deliver + ack"],
           title: "Custom VPN (C++)",
           tag: "Systems · Networking",
           year: "2026",
@@ -184,6 +186,7 @@ export const translations = {
         },
         {
           visual: "bridge",
+          steps: ["message in", "queue", "tokenize", "infer", "reply"],
           title: "WhatsApp LLM (C++)",
           tag: "AI · Systems",
           year: "2026",
@@ -192,6 +195,7 @@ export const translations = {
         },
         {
           visual: "detect",
+          steps: ["camera feed", "scan", "detect", "count", "live update"],
           title: "Library Tracker (YOLO)",
           tag: "Computer Vision",
           year: "2025",
@@ -200,6 +204,7 @@ export const translations = {
         },
         {
           visual: "net",
+          steps: ["input", "forward pass", "loss", "backprop", "update weights"],
           title: "Neural Network (C++)",
           tag: "Systems · ML",
           year: "2025",
@@ -208,6 +213,7 @@ export const translations = {
         },
         {
           visual: "pixels",
+          steps: ["read bytes", "parse header", "decode (zig-zag)", "render"],
           title: "Image Decoder (C++)",
           tag: "Low-Level",
           year: "2025",
@@ -216,6 +222,7 @@ export const translations = {
         },
         {
           visual: "gears",
+          steps: ["motor", "gear train", "crank", "linkage", "flap"],
           title: "Mechanical Bird (SOLIDWORKS)",
           tag: "Mechatronics",
           year: "2025",
@@ -224,6 +231,7 @@ export const translations = {
         },
         {
           visual: "plane",
+          steps: ["model", "mesh", "apply load", "solve", "stress map"],
           title: "Aircraft Design (SOLIDWORKS)",
           tag: "Mechanical",
           year: "2025",
@@ -232,6 +240,7 @@ export const translations = {
         },
         {
           visual: "database",
+          steps: ["schema", "relations", "insert", "join", "view"],
           title: "Blood Donor System",
           tag: "Databases",
           year: "2023",
@@ -460,6 +469,7 @@ export const translations = {
       items: [
         {
           visual: "chat",
+          steps: ["istem", "planlama", "araç çağrısı", "gözlem", "yanıt"],
           title: "BarkevGPT",
           tag: "Yapay Zekâ · Ajanlar",
           year: "2026",
@@ -468,6 +478,7 @@ export const translations = {
         },
         {
           visual: "tunnel",
+          steps: ["paket", "şifreleme", "kapsülleme", "tünel", "şifre çözme", "teslim + onay"],
           title: "Özel VPN (C++)",
           tag: "Sistemler · Ağlar",
           year: "2026",
@@ -476,6 +487,7 @@ export const translations = {
         },
         {
           visual: "bridge",
+          steps: ["gelen mesaj", "kuyruk", "tokenleştirme", "çıkarım", "yanıt"],
           title: "WhatsApp LLM (C++)",
           tag: "Yapay Zekâ · Sistemler",
           year: "2026",
@@ -484,6 +496,7 @@ export const translations = {
         },
         {
           visual: "detect",
+          steps: ["kamera akışı", "tarama", "tespit", "sayım", "canlı güncelleme"],
           title: "Kütüphane Takipçisi (YOLO)",
           tag: "Bilgisayarlı Görü",
           year: "2025",
@@ -492,6 +505,7 @@ export const translations = {
         },
         {
           visual: "net",
+          steps: ["girdi", "ileri yayılım", "kayıp", "geri yayılım", "ağırlık güncelleme"],
           title: "Sinir Ağı (C++)",
           tag: "Sistemler · ML",
           year: "2025",
@@ -500,6 +514,7 @@ export const translations = {
         },
         {
           visual: "pixels",
+          steps: ["baytları oku", "başlığı ayrıştır", "çöz (zig-zag)", "görüntüle"],
           title: "Görüntü Çözücü (C++)",
           tag: "Düşük Seviye",
           year: "2025",
@@ -508,6 +523,7 @@ export const translations = {
         },
         {
           visual: "gears",
+          steps: ["motor", "dişli takımı", "krank", "bağlantı kolu", "kanat çırpma"],
           title: "Mekanik Kuş (SOLIDWORKS)",
           tag: "Mekatronik",
           year: "2025",
@@ -516,6 +532,7 @@ export const translations = {
         },
         {
           visual: "plane",
+          steps: ["model", "ağ örme", "yük uygula", "çöz", "gerilme haritası"],
           title: "Uçak Tasarımı (SOLIDWORKS)",
           tag: "Mekanik",
           year: "2025",
@@ -524,6 +541,7 @@ export const translations = {
         },
         {
           visual: "database",
+          steps: ["şema", "ilişkiler", "ekleme", "birleştirme", "görünüm"],
           title: "Kan Bağışçısı Sistemi",
           tag: "Veritabanları",
           year: "2023",
@@ -752,6 +770,7 @@ export const translations = {
       items: [
         {
           visual: "chat",
+          steps: ["Prompt", "Planen", "Tool-Aufruf", "Beobachten", "Antwort"],
           title: "BarkevGPT",
           tag: "KI · Agenten",
           year: "2026",
@@ -760,6 +779,7 @@ export const translations = {
         },
         {
           visual: "tunnel",
+          steps: ["Paket", "Verschlüsseln", "Kapseln", "Tunnel", "Entschlüsseln", "Zustellen + ACK"],
           title: "Eigenes VPN (C++)",
           tag: "Systeme · Netzwerke",
           year: "2026",
@@ -768,6 +788,7 @@ export const translations = {
         },
         {
           visual: "bridge",
+          steps: ["Nachricht", "Warteschlange", "Tokenisieren", "Inferenz", "Antwort"],
           title: "WhatsApp LLM (C++)",
           tag: "KI · Systeme",
           year: "2026",
@@ -776,6 +797,7 @@ export const translations = {
         },
         {
           visual: "detect",
+          steps: ["Kamera-Feed", "Scan", "Erkennen", "Zählen", "Live-Update"],
           title: "Bibliotheks-Tracker (YOLO)",
           tag: "Computer Vision",
           year: "2025",
@@ -784,6 +806,7 @@ export const translations = {
         },
         {
           visual: "net",
+          steps: ["Eingabe", "Forward Pass", "Verlust", "Backprop", "Gewichte anpassen"],
           title: "Neuronales Netz (C++)",
           tag: "Systeme · ML",
           year: "2025",
@@ -792,6 +815,7 @@ export const translations = {
         },
         {
           visual: "pixels",
+          steps: ["Bytes lesen", "Header parsen", "Dekodieren (Zickzack)", "Rendern"],
           title: "Bilddecoder (C++)",
           tag: "Low-Level",
           year: "2025",
@@ -800,6 +824,7 @@ export const translations = {
         },
         {
           visual: "gears",
+          steps: ["Motor", "Getriebe", "Kurbel", "Koppel", "Flügelschlag"],
           title: "Mechanischer Vogel (SOLIDWORKS)",
           tag: "Mechatronik",
           year: "2025",
@@ -808,6 +833,7 @@ export const translations = {
         },
         {
           visual: "plane",
+          steps: ["Modell", "Vernetzen", "Last aufbringen", "Lösen", "Spannungskarte"],
           title: "Flugzeugkonstruktion (SOLIDWORKS)",
           tag: "Mechanik",
           year: "2025",
@@ -816,6 +842,7 @@ export const translations = {
         },
         {
           visual: "database",
+          steps: ["Schema", "Relationen", "Einfügen", "Join", "View"],
           title: "Blutspender-System",
           tag: "Datenbanken",
           year: "2023",

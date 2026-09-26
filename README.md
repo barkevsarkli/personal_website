@@ -41,6 +41,7 @@ npm run preview  # preview the production build
 ```
 src/
   components/   ThreeScene, Navbar, SectionHeading, Pop, ProjectVisual, Icons
+    visuals/    Scene (shared stage) + one story animation per project
   sections/     Hero, About, Education, Certificates, Arsenal, Experience,
                 Publications, Projects, Leadership, Hobbies (Off-Screen), Footer (Contact)
   three/        NeuralNetwork (shaders), scrollProgress store
@@ -50,5 +51,16 @@ src/
 ```
 
 Section order is set in `src/App.jsx`. Each project in `translations.js` names
-its motif with a `visual` key (see `ProjectVisual.jsx`), so reordering projects
-never mixes up their visuals.
+its animation with a `visual` key (see `ProjectVisual.jsx`), so reordering projects
+never mixes up their visuals, and lists its caption `steps` in order.
+
+## Project animations
+
+Each project card opens with a 10–15s story animation (e.g. the VPN packet being
+encrypted, encapsulated, tunnelled and decrypted; the neural net's forward pass,
+loss and backprop). They're GSAP timelines over inline SVG in
+`src/components/visuals/`, built on the shared `Scene` stage, which:
+
+- loops the timeline, but only plays it while the card is on screen;
+- cross-fades the numbered step caption (`steps`, translated in EN/TR/DE);
+- shows a single representative frame for `prefers-reduced-motion` users.
